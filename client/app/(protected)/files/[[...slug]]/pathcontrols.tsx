@@ -27,7 +27,7 @@ export default function PathControls({ path }: { path: string }) {
     setControlState(0);
     setName("");
 
-    const response = await fetch("/api/files-dirs/" + path + "/" + name, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/files-dirs/` + path + "/" + name, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -57,7 +57,7 @@ export default function PathControls({ path }: { path: string }) {
     setControlState(0);
     setName("");
 
-    const response = await fetch("/api/files-dirs/" + path + "/" + name, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_API_URL}/files-dirs/` + path + "/" + name, {
       method: "DELETE",
       headers: {
         "Content-Type": "application/json",

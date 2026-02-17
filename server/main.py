@@ -32,6 +32,7 @@ def getenv(k):
 KEY = getenv("KEY")
 ROOT_DIR = getenv("ROOT_DIR")
 SESSION_SECRET = getenv("SESSION_SECRET")
+HOST_URL = getenv("HOST_URL")
 
 # just in case it hasn't been initialized yet :3
 try:
@@ -213,7 +214,7 @@ def generate_signature(filename: str, expires: int, action: str):
 def generate_download_url(path: str, _: None = Depends(auth)):
     expires = int(time.time() + 300)  # five minutes
     signature = generate_signature(path, expires, "download")
-    url = f"https://files.krazyorange.lol/api/files/{path}?expires={expires}&action=download&signature={signature}"
+    url = f"{HOST_URL}/files/{path}?expires={expires}&action=download&signature={signature}"
     return {"url": url}
 
 
@@ -221,7 +222,7 @@ def generate_download_url(path: str, _: None = Depends(auth)):
 def generate_upload_url(path: str, _: None = Depends(auth)):
     expires = int(time.time() + 300)  # five minutes
     signature = generate_signature(path, expires, "upload")
-    url = f"https://files.krazyorange.lol/api/files/{path}?expires={expires}&action=upload&signature={signature}"
+    url = f"{HOST_URL}/files/{path}?expires={expires}&action=upload&signature={signature}"
     return {"url": url}
 
 
