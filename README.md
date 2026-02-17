@@ -25,11 +25,11 @@ to install the dependencies, run:
 ```bash
 $ npm install
 ```
-to start the frontend, run:
+to start the frontend in dev mode, run:
 ```bash
 $ npm run dev
 ```
-or alternatively:
+or alternatively for production (this is what the docker image does):
 ```bash
 $ npm run build
 $ npm run start
@@ -38,10 +38,10 @@ these commands start the server on port 8040 by default. edit in `package.json` 
 
 ### backend
 
-backend is written using FastAPI. notice that no blood, sweat, or tears have been shed. the backend uses whatever theme your IDE uses.
+backend is written using just Python and FastAPI. notice that no blood, sweat, or tears have been shed. the backend uses whatever theme your IDE uses <3
 
 do all this stuff in the `./server` directory.
-set up ur venv using ur favorite tool like `pip`, `uv`, idc. here's default ahh `pip`:
+set up ur venv using ur favorite tool like `pip`, `uv`, idc. here's the default ahh `pip`:
 ```bash
 $ python -m venv .venv
 ```
@@ -53,3 +53,4 @@ run the server:
 ```bash
 $ python main.py
 ```
+this runs the server on port 8030. edit at the bottom of `main.py` if u want.
