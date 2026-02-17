@@ -45,6 +45,10 @@ set up ur venv using ur favorite tool like `pip`, `uv`, idc. here's the default 
 ```bash
 $ python -m venv .venv
 ```
+activate the venv (this works for linux idk ab windows lmao):
+```bash
+$ source .venv/bin/activate
+```
 install the dependencies:
 ```bash
 $ pip install -r requirements.txt
@@ -54,3 +58,11 @@ run the server:
 $ python main.py
 ```
 this runs the server on port 8030. edit at the bottom of `main.py` if u want.
+
+### credits
+
+just me :D i am so stronk and smort
+
+plz accept me to college :( why CS so goofy ahh competitive fr
+
+tysm for trying!!! u should do a PR or smth cool that would be awesome
